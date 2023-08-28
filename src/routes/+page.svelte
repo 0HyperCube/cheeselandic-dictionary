@@ -2,6 +2,7 @@
 import Search from "../search.svelte";
 
 export const prerender = true;
+export const ssr = false;
 let valuesList = [];
 
 async function load() {
