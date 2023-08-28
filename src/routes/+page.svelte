@@ -1,5 +1,6 @@
 <script>
 import Search from "../search.svelte";
+import { base } from '$app/paths';
 
 let valuesList = [];
 
@@ -66,7 +67,7 @@ load()
 </script>
 
 <div class="column">
-		<img id="logo" src="favicon.png" alt="" />
+		<img id="logo" src={`${base}/favicon.png`} alt="" />
 	<div class="row">
 		<h1>Cheeselandic Dictionary</h1>
 		<Search onPreview={preview}/>
