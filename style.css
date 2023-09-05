@@ -55,7 +55,7 @@ button {
 	text-decoration: none;
 }
 .hints > li {
-	background-color: grey;	
+	background-color: grey;
 }
 .hints > li.selected {
 	background-color: yellow;

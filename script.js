@@ -117,7 +117,6 @@ async function submit() {
 
 // The key has been pressed!
 async function keyPress(event){
-
 	console.info(event.key);
 
 	if (event.key == "ArrowUp"){
