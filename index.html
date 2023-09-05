@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<script>
+			let dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (window.matchMedia) {
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => (dark = event.matches));
+			}
+		</script>
+		<title>Cheeselandic Dictionary</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<article class="content">
+			<div class="column">
+				<img id="logo" src="favicon.png" alt="" />
+				<div class="row">
+					<h1>Cheeselandic Dictionary</h1>
+					<div class="search" id="search-container">
+						<input id="search-input" autofocus><button id="submit-button">Search</button>
+						<ul class="hints" id="hints-container">
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</article>
+	</body>
+	<style>
+		body {
+			margin: 0;
+		}
+		html, body, body > div {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</html>

@@ -1,0 +1,74 @@
+#logo {
+	max-width:300px;
+	flex-shrink: 144;
+}
+.column {
+	display: flex;flex-wrap: wrap;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	
+}
+.row {
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.search {
+	position: relative;
+	display: flex;
+}
+input {
+	border-radius: 6px 0 0 6px;
+	flex-grow: 1;
+	padding: 5px;
+	font-size: large;
+}
+.expanded > input {
+	border-bottom-left-radius: 0;
+}
+button {
+	border-radius: 0 6px 6px 0;
+}
+.expanded > button{
+	border-bottom-right-radius: 0;
+}
+.hints {
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	top: 100%;
+}
+.hints > li {
+	width: 100%;
+}
+.hints > li > a {
+	display: block;
+	width: 100%;
+	padding: 3px;
+	color: white;
+	text-decoration: none;
+}
+.hints > li {
+	background-color: grey;	
+}
+.hints > li.selected {
+	background-color: yellow;
+}
+.hints > li:hover {
+	background-color: green;
+}
+.hints > li.selected:hover{
+	background-color: yellowgreen;
+}
+.hints > li.selected > a {
+	color: black;
+}
+.hints > li:last-of-type {
+	border-radius: 0 0 6px 6px;
+}
