@@ -100,8 +100,22 @@ function processInput(e) {
 function updateSelected() {
 	let childNodes = hintsContainer.childNodes;
 	for (let x = 0; x < childNodes.length; x++) {
-		if (x == selected)
+		if (x == selected) {
+			// epic scrolling logic
+			let hintsBoundingRect = hintsContainer.getBoundingClientRect();
+			let selectedBoundingRect = childNodes[x].getBoundingClientRect();
+
+			if (hintsBoundingRect.y > selectedBoundingRect.y) {
+				hintsContainer.scrollBy(0, selectedBoundingRect.y-hintsBoundingRect.y);
+			}
+			if (hintsBoundingRect.y + hintsBoundingRect.height < (selectedBoundingRect.y + selectedBoundingRect.height)) {
+				hintsContainer.scrollBy(0, selectedBoundingRect.y-(hintsBoundingRect.y+hintsBoundingRect.height)+selectedBoundingRect.height)
+				console.log("a");
+
+			}
+			
 			childNodes[x].classList.add("selected");
+		}
 		else
 		childNodes[x].classList.remove("selected");
 	}
